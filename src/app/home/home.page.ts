@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AracService } from '../arac.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public router:Router, public aracService:AracService) {}
+
+  git(deger)
+  {
+    this.router.navigate(['arac-detay', {id:deger}]);
+  }
 
 }

@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'arac-detay',
+    loadChildren: () => import('./arac-detay/arac-detay.module').then( m => m.AracDetayPageModule)
+  },
 ];
 
 @NgModule({
